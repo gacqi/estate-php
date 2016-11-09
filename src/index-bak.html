@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="基于vuejs搭建的一个简单的房产信息网站">
+    <meta name="author" content="2857704662@qq.com">
+    <meta name="Keywords" content="数媒作业,房产信息网站,vuejs">
+    <title>吼！茨木茨木酒吞呼唤你~</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./lib/favicon.png">
+    <link rel="stylesheet" href="./lib/material.min.css">
+    <script src="./lib/material.min.js"></script>
+    <link rel="stylesheet" href="./lib/icon.css">
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-resource.js"></script>
+    <link rel="stylesheet" href="./css/components.css">
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Simple header with scrollable tabs. -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">茨木sama</span>
+            </div>
+            <!-- Tabs -->
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                <a href="#scroll-tab-1" class="mdl-layout__tab is-active">搜素の引擎</a>
+                <a href="#scroll-tab-2" class="mdl-layout__tab">信息の弹射</a>
+                <a href="#scroll-tab-3" class="mdl-layout__tab">登入の秘钥</a>
+                <a href="#scroll-tab-4" class="mdl-layout__tab">投诉の神殿</a>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">^_^</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="">个人中心</a>
+                <a class="mdl-navigation__link" href="">账号设置</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div id="y-search-module" v-cloak>
+                        <y-search></y-search>
+                        <y-list></y-list>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div id="y-message-module" v-cloak>
+
+                        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                            <div class="mdl-tabs__tab-bar">
+                                <a href="#sell-panel" class="mdl-tabs__tab is-active">出售</a>
+                                <a href="#rentOut-panel" class="mdl-tabs__tab">出租</a>
+                                <a href="#askBuy-panel" class="mdl-tabs__tab">求购</a>
+                                <a href="#wantRent-panel" class="mdl-tabs__tab">求租</a>
+                                <a href="#shareHouse-panel" class="mdl-tabs__tab">合租</a>
+                            </div>
+
+                            <div class="mdl-tabs__panel is-active" id="sell-panel">
+                                <y-sell></y-sell>
+                            </div>
+                            <div class="mdl-tabs__panel" id="rentOut-panel">
+                                <y-rent-out></y-rent-out>
+                            </div>
+                            <div class="mdl-tabs__panel" id="askBuy-panel">
+                                <y-ask-buy></y-ask-buy>
+                            </div>
+                            <div class="mdl-tabs__panel" id="wantRent-panel">
+                                <y-want-rent></y-want-rent>
+                            </div>
+                            <div class="mdl-tabs__panel" id="shareHouse-panel">
+                                <y-share-house></y-share-house>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div id="y-login-module" v-cloak>
+                        <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                            <div class="mdl-tabs__tab-bar">
+                                <a href="#login-panel" class="mdl-tabs__tab is-active">登入</a>
+                                <a href="#sign-panel" class="mdl-tabs__tab">注册</a>
+                            </div>
+
+                            <div class="mdl-tabs__panel is-active" id="login-panel">
+                                <y-login></y-login>
+                            </div>
+                            <div class="mdl-tabs__panel" id="sign-panel">
+                                <y-sign></y-sign>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+                <div class="page-content">
+                    <!-- Your content goes here -->
+                    <div id="y-complaint-module" v-cloak>
+                        <y-complaint></y-complaint>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="./js/yus.lib.js"></script>
+    <script src="./js/y-search.js"></script>
+    <script src="./js/y-message.js"></script>
+    <script src="./js/y-login.js"></script>
+    <script src="./js/y-complaint.js"></script>
+</body>
+
+</html>

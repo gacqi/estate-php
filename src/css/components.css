@@ -1,0 +1,35 @@
+.y-searchbox{
+    margin:10px 54px;
+}
+.demo-card-wide.mdl-card {
+    width: 512px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.demo-card-wide > .mdl-card__title {
+    color: #fff;
+    height: 176px;
+    background: url('../img/welcome_card.jpg') top / cover;
+}
+
+.demo-card-wide > .mdl-card__menu {
+    color: #fff;
+}
+
+.y-login .mdl-card__supporting-text,.y-sign .mdl-card__supporting-text{
+    text-align: center;
+}
+
+.y-complaint{
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    text-align: center;
+}
+.y-complaint .mdl-card__title{
+    background: url('../img/complaint_card.jpg') top / cover;
+}
+.y-money .mdl-card__title{
+    background: url('../img/money_card.jpg') top / cover;
+}
